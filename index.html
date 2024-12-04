@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Matemática</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo para a barra de navegação */
+        nav {
+            width: 100%;
+            background-color: #ff4d87;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff1c60;
+        }
+
+        h1 {
+            margin-top: 100px;
+            font-size: 2.5rem;
+            color: #3e3e3e;
+        }
+
+        .search-container {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            padding: 15px;
+            width: 350px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 2px solid #ff4d87;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ff1c60;
+        }
+
+        .dictionary-container {
+            margin-top: 30px;
+            width: 80%;
+            max-width: 900px;
+            display: none;
+        }
+
+        .term {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .term:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .term h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .term p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        .no-results {
+            color: #888;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* Estilo para dispositivos móveis */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px 0;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 1rem;
+                margin: 0 8px;
+            }
+
+            .search-container input[type="text"] {
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .term h3 {
+                font-size: 1.3rem;
+            }
+
+            .term p {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Barra de Navegação -->
+<nav>
+    <a href="inicio.html">Início</a>
+    <a href="DicionárioMatemáticoA-Z.html">Dicionário Matemático A-Z</a>
+    <a href="sinais.html">Sinais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="index.html">Dicionário de Matemática</a>
+        <a href="avancados.html">Conceitos Avançados</a>
+        <a href="exemplos.html">Exemplos</a>
+</nav>
+
+<h1>Dicionário de Matemática</h1>
+
+<div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchTerm()" placeholder="Pesquise um termo...">
+</div>
+
+<div class="dictionary-container" id="dictionaryContainer">
+    <!-- Termos Matemáticos -->
+    <div class="term">
+        <h3>Algoritmo</h3>
+        <p>Conjunto de passos finitos e bem definidos que visam resolver um problema ou realizar uma tarefa.</p>
+    </div>
+    <div class="term">
+        <h3>Ângulo</h3>
+        <p>Formado por duas retas que se encontram em um ponto comum, chamado vértice.</p>
+    </div>
+    <div class="term">
+        <h3>Área</h3>
+        <p>Medida da superfície de uma figura geométrica.</p>
+    </div>
+    <div class="term">
+        <h3>Equação</h3>
+        <p>Relação matemática que apresenta duas expressões com valores iguais.</p>
+    </div>
+    <div class="term">
+        <h3>Função</h3>
+        <p>Relação entre dois conjuntos onde a cada elemento de um conjunto está associado exatamente um elemento do outro conjunto.</p>
+    </div>
+    <div class="term">
+        <h3>Integral</h3>
+        <p>Operação matemática que permite calcular áreas, volumes e outras grandezas relacionadas a funções.</p>
+    </div>
+    <div class="term">
+        <h3>Derivada</h3>
+        <p>Taxa de variação instantânea de uma função em um ponto específico.</p>
+    </div>
+    <div class="term">
+        <h3>Teorema de Pitágoras</h3>
+        <p>Em um triângulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos catetos.</p>
+    </div>
+    <div class="term">
+        <h3>Teorema de Tales</h3>
+        <p>Todo segmento de reta paralelo a um dos lados de um triângulo e que corta os outros dois lados é dividido de forma proporcional.</p>
+    </div>
+    <div class="term">
+        <h3>Probabilidade</h3>
+        <p>Ramo da matemática que estuda as chances de ocorrência de um evento.</p>
+    </div>
+    <div class="term">
+        <h3>Logaritmo</h3>
+        <p>Operação inversa da exponenciação, sendo usado para resolver equações do tipo \(a^x = b\).</p>
+    </div>
+    <div class="term">
+        <h3>Radiciação</h3>
+        <p>Operação inversa da exponenciação, utilizada para calcular a raiz de um número.</p>
+    </div>
+    <div class="term">
+        <h3>Fatorial</h3>
+        <p>Produto de todos os números inteiros de 1 até o número dado. Representado como \(n!\).</p>
+    </div>
+    <div class="term">
+        <h3>Progressão Aritmética (PA)</h3>
+        <p>Sequência de números em que a diferença entre termos consecutivos é constante.</p>
+    </div>
+    <div class="term">
+        <h3>Progressão Geométrica (PG)</h3>
+        <p>Sequência de números em que a razão entre termos consecutivos é constante.</p>
+    </div>
+    <div class="term">
+        <h3>Geometria Analítica</h3>
+        <p>Ramo da geometria que utiliza o sistema de coordenadas cartesianas para estudar as figuras geométricas.</p>
+    </div>
+    <div class="term">
+        <h3>Espaço Vetorial</h3>
+        <p>Conjunto de vetores que satisfazem as propriedades de adição vetorial e multiplicação por escalar.</p>
+    </div>
+    <div class="term">
+        <h3>Função Exponencial</h3>
+        <p>Função matemática da forma \(f(x) = a^x\), onde \(a\) é uma constante positiva.</p>
+    </div>
+    <div class="term">
+        <h3>Função Logarítmica</h3>
+        <p>Função inversa da exponencial, representada como \(f(x) = \log_a(x)\).</p>
+    </div>
+    <div class="term">
+        <h3>Limite</h3>
+        <p>Valor que uma função se aproxima quando a variável independente tende a um valor específico.</p>
+    </div>
+    <div class="term">
+        <h3>Derivada Parcial</h3>
+        <p>Derivada de uma função multivariável em relação a uma de suas variáveis, mantendo as outras constantes.</p>
+    </div>
+    <div class="term">
+        <h3>Integral Imprópria</h3>
+        <p>Tipo de integral em que o intervalo de integração é infinito ou a função tem descontinuidade no intervalo.</p>
+    </div>
+</div>
+
+<div class="no-results" id="noResults">Nenhum termo encontrado</div>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const terms = document.querySelectorAll('.term');
+    const dictionaryContainer = document.getElementById('dictionaryContainer');
+    const noResults = document.getElementById('noResults');
+
+    function searchTerm() {
+        const query = searchInput.value.toLowerCase();
+        let visibleTerms = 0;
+
+        terms.forEach(term => {
+            const termText = term.innerText.toLowerCase();
+            if (termText.includes(query)) {
+                term.style.display = 'block';
+                visibleTerms++;
+            } else {
+                term.style.display = 'none';
+            }
+        });
+
+        // Exibir ou esconder a mensagem "Nenhum termo encontrado"
+        if (visibleTerms === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+
+        // Exibir o container de dicionário caso haja resultados
+        if (visibleTerms > 0) {
+            dictionaryContainer.style.display = 'block';
+        } else {
+            dictionaryContainer.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

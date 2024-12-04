@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Matemática - Exemplos</title>
+    
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background-color: #ff4d87;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            color: #ff1c60;
+        }
+
+        /* Ajustando o espaçamento da página para a nav fixa */
+        .main-content {
+            padding-top: 80px; /* Para que o conteúdo não fique coberto pela nav fixa */
+        }
+
+        /* Seção Hero */
+        .hero-section {
+            background-color: #ff4d87;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            background-color: #ff1c60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .hero-button:hover {
+            background-color: #ff4081;
+        }
+
+        /* Seção de Exemplos */
+        .examples-section {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: white;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .examples-section h2 {
+            font-size: 2.5rem;
+            color: #ff4d87;
+            margin-bottom: 20px;
+        }
+
+        .example {
+            background-color: #ffebf1;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .example h3 {
+            color: #ff4d87;
+            font-size: 2rem;
+        }
+
+        .example p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #ff4d87;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            color: #ff1c60;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .examples-section h2 {
+                font-size: 2rem;
+            }
+
+            .example p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de Navegação -->
+<nav>
+    <a href="inicio.html">Início</a>
+    <a href="DicionárioMatemáticoA-Z.html">Dicionário Matemático A-Z</a>
+    <a href="sinais.html">Sinais</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="index.html">Dicionário de Matemática</a>
+        <a href="avancados.html">Conceitos Avançados</a>
+        <a href="exemplos.html">Exemplos</a>
+</nav>
+
+
+
+    <!-- Seção de Exemplos -->
+    <section class="examples-section">
+        <h2>Exemplos de Conceitos Avançados</h2>
+
+        <!-- Exemplo 1: Álgebra Abstrata -->
+        <div class="example">
+            <h3>Exemplo 1: Álgebra Abstrata - Grupo</h3>
+            <p>Considere o conjunto dos números inteiros, Z, com a operação de adição. Este conjunto forma um <strong>grupo</strong>, pois satisfaz as seguintes propriedades:</p>
+            <ul>
+                <li><strong>Fechamento:</strong> A soma de dois inteiros é sempre um inteiro.</li>
+                <li><strong>Associatividade:</strong> A ordem das operações não altera o resultado.</li>
+                <li><strong>Elemento neutro:</strong> O número 0 é o elemento neutro, pois somá-lo a qualquer outro número não altera o resultado.</li>
+                <li><strong>Elemento inverso:</strong> Para cada número, existe um número inverso. Por exemplo, o inverso de 5 é -5.</li>
+            </ul>
+        </div>
+
+        <!-- Exemplo 2: Cálculo Avançado -->
+        <div class="example">
+            <h3>Exemplo 2: Cálculo Avançado - Derivada Parcial</h3>
+            <p>Se tivermos uma função de duas variáveis, como <strong>f(x, y) = x²y + 3xy²</strong>, podemos calcular a derivada parcial em relação a uma das variáveis. Por exemplo, a derivada parcial de <strong>f(x, y)</strong> em relação a x é:</p>
+            <pre>∂f/∂x = 2xy + 3y²</pre>
+            <p>Isso mostra como a função varia à medida que a variável x muda, mantendo y constante.</p>
+        </div>
+
+        <!-- Exemplo 3: Topologia -->
+        <div class="example">
+            <h3>Exemplo 3: Topologia - Espaços Topológicos</h3>
+            <p>Em topologia, um espaço é considerado <strong>contínuo</strong> se puder ser deformado de forma contínua sem rasgar ou colar partes. Imagine uma xícara e um donut. Em termos topológicos, eles são equivalentes, pois ambos têm um buraco central, e podem ser transformados um no outro sem cortar ou colar.</p>
+        </div>
+
+        <!-- Exemplo 4: Teoria dos Números -->
+        <div class="example">
+            <h3>Exemplo 4: Teoria dos Números - Números Primos</h3>
+            <p>Um exemplo clássico da teoria dos números é o estudo dos números primos. O número <strong>7</strong> é primo, pois seus únicos divisores são 1 e 7. O <strong>número 9</strong>, por outro lado, não é primo, pois pode ser dividido por 1, 3 e 9.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Dicionário de Matemática | Todos os direitos reservados</p>
+        <div class="footer-links">
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Contate-nos</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

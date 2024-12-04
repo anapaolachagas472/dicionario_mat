@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário de Matemática - Conceitos Avançados</title>
+    
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background-color: #ff4d87;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            color: #ff1c60;
+        }
+
+        /* Ajustando o espaçamento da página para a nav fixa */
+        .main-content {
+            padding-top: 80px; /* Para que o conteúdo não fique coberto pela nav fixa */
+        }
+
+        /* Seção Hero */
+        .hero-section {
+            background-color: #ff4d87;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            background-color: #ff1c60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .hero-button:hover {
+            background-color: #ff4081;
+        }
+
+        /* Seção de Informações */
+        .container-info {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: white;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-info h2 {
+            font-size: 2.5rem;
+            color: #ff4d87;
+            margin-bottom: 20px;
+        }
+
+        .container-info p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .conceito {
+            background-color: #ffebf1;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .conceito h3 {
+            color: #ff4d87;
+            font-size: 2rem;
+        }
+
+        .conceito p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #ff4d87;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            color: #ff1c60;
+        }
+
+        /* Estilos Responsivos */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .container-info h2 {
+                font-size: 2rem;
+            }
+
+            .container-info p {
+                font-size: 1rem;
+            }
+
+            /* Ajustes nos elementos da navegação */
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+
+            /* Ajustes no título da seção de conceitos */
+            .conceitos-title h1 {
+                font-size: 2rem;
+            }
+
+            /* Ajustes nos conceitos */
+            .conceito h3 {
+                font-size: 1.5rem;
+            }
+
+            .conceito p {
+                font-size: 1rem;
+            }
+
+            /* Ajuste do rodapé para telas pequenas */
+            footer {
+                padding: 15px;
+            }
+        }
+
+        /* Estilo para o título "Conceitos Avançados" */
+        .conceitos-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Alinhar o texto no centro */
+            margin-top: 100px; /* Garantir que o título tenha espaço abaixo da barra de navegação */
+        }
+
+        .conceitos-title h1 {
+            font-size: 3rem;
+            color: #ff4d87;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Barra de Navegação -->
+<nav>
+    <a href="inicio.html">Início</a>
+    <a href="DicionárioMatemáticoA-Z.html">Dicionário Matemático A-Z</a>
+    <a href="sinais.html">Sinais</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="index.html">Dicionário de Matemática</a>
+    <a href="avancados.html">Conceitos Avançados</a>
+    <a href="exemplos.html">Exemplos</a>
+</nav>
+
+<!-- Seção "Conceitos Avançados" -->
+<div class="conceitos-title">
+    <h1>Conceitos Avançados</h1>
+</div>
+
+<!-- Conceito 1: Álgebra Abstrata -->
+<div class="conceito">
+    <h3>Álgebra Abstrata</h3>
+    <p>Álgebra abstrata é um ramo da matemática que se concentra em estruturas algébricas como grupos, anéis e corpos. Em vez de se preocupar com as operações específicas de números, a álgebra abstrata estuda as propriedades e as relações dessas estruturas de forma geral.</p>
+    <p>Por exemplo, um <strong>grupo</strong> é uma coleção de elementos com uma operação binária que satisfaz certas propriedades, como a existência de um elemento neutro e a possibilidade de inversão.</p>
+</div>
+
+<!-- Conceito 2: Cálculo Avançado -->
+<div class="conceito">
+    <h3>Cálculo Avançado</h3>
+    <p>O cálculo avançado envolve o estudo de limites, derivadas e integrais em um nível mais profundo. Entre os tópicos avançados estão o cálculo de várias variáveis, séries de Taylor, integrais múltiplas e teoremas complexos como o Teorema de Stokes.</p>
+    <p>Por exemplo, o cálculo de várias variáveis estuda funções de mais de uma variável, como <strong>f(x, y)</strong>, e suas derivadas parciais.</p>
+</div>
+
+<!-- Conceito 3: Topologia -->
+<div class="conceito">
+    <h3>Topologia</h3>
+    <p>Topologia é o estudo das propriedades espaciais que permanecem invariantes sob deformações contínuas, como esticar ou torcer, mas sem rasgar. Isso envolve o estudo de conceitos como continuidade, compactidade e conexidade.</p>
+    <p>Por exemplo, uma <strong>torção</strong> de uma xícara pode ser considerada topologicamente igual a um donut, já que ambos têm um único buraco, mas o formato real não importa.</p>
+</div>
+
+<!-- Conceito 4: Teoria dos Números -->
+<div class="conceito">
+    <h3>Teoria dos Números</h3>
+    <p>A teoria dos números estuda as propriedades dos números inteiros e as relações entre eles. Isso inclui conceitos como divisibilidade, primos, congruências e a distribuição dos números primos.</p>
+    <p>Um exemplo famoso é o <strong>Teorema Fundamental da Aritmética</strong>, que afirma que todo número inteiro maior que 1 pode ser expresso de maneira única como um produto de números primos.</p>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2024 Dicionário de Matemática. Todos os direitos reservados.</p>
+    <div class="footer-links">
+        <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+    </div>
+</footer>
+
+</body>
+</html>

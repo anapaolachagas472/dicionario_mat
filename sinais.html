@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinais da Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #3e3e3e;
+            margin-bottom: 20px;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background-color: #ff4d87;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            color: #ff1c60;
+        }
+
+        /* Ajustando o espaçamento da página para a nav fixa */
+        .main-content {
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        .signs-container {
+            width: 80%;
+            max-width: 900px;
+            margin-top: 50px;
+        }
+
+        .sign-section {
+            margin-top: 30px;
+        }
+
+        .sign-section h2 {
+            font-size: 2rem;
+            color: #3e3e3e;
+        }
+
+        .sign {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .sign:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .sign h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .sign p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        /* Estilos para o botão "Adicionar Sinal" */
+        button {
+            background-color: #ff4d87;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1c60;
+        }
+
+        /* Estilos para o formulário */
+        .form-container {
+            display: none;
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .sign h3 {
+                font-size: 1.3rem;
+            }
+
+            .sign p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de Navegação -->
+<nav>
+    <a href="inicio.html">Início</a>
+    <a href="DicionárioMatemáticoA-Z.html">Dicionário Matemático A-Z</a>
+    <a href="sinais.html">Sinais</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="index.html">Dicionário de Matemática</a>
+    <a href="avancados.html">Conceitos Avançados</a>
+    <a href="exemplos.html">Exemplos</a>
+</nav>
+
+<h1>Sinais da Matemática</h1>
+
+<!-- Botão para Adicionar Novo Sinal -->
+<button onclick="mostrarFormulario()">Adicionar Sinal</button>
+
+<!-- Formulário para Adicionar Novo Sinal -->
+<div class="form-container" id="formulario">
+    <h2>Adicionar Novo Sinal</h2>
+    
+    <label for="letra">Letra</label>
+    <input type="text" id="letra" placeholder="Digite a letra ou símbolo (ex: +, -, ×)" required>
+    
+    <label for="sinal">Sinal</label>
+    <input type="text" id="sinal" placeholder="Digite o sinal associado (ex: Adição, Subtração)" required>
+    
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" rows="4" placeholder="Descreva o sinal e dê exemplos" required></textarea>
+    
+    <button onclick="adicionarSinal()">Adicionar</button>
+</div>
+
+<!-- Conteúdo dos Sinais -->
+<div class="signs-container" id="sinais">
+    
+    <!-- Seção do Sinal de Adição -->
+    <div class="sign-section" id="adicao">
+        <h2>Adição (+)</h2>
+        <div class="sign">
+            <h3>Adição</h3>
+            <p>O sinal de adição (+) é usado para somar dois ou mais números. Exemplo: 3 + 2 = 5.</p>
+        </div>
+    </div>
+
+    <!-- Seção do Sinal de Subtração -->
+    <div class="sign-section" id="subtracao">
+        <h2>Subtração (-)</h2>
+        <div class="sign">
+            <h3>Subtração</h3>
+            <p>O sinal de subtração (-) é usado para subtrair um número de outro. Exemplo: 5 - 3 = 2.</p>
+        </div>
+    </div>
+
+    <!-- Seção do Sinal de Multiplicação -->
+    <div class="sign-section" id="multiplicacao">
+        <h2>Multiplicação (×)</h2>
+        <div class="sign">
+            <h3>Multiplicação</h3>
+            <p>O sinal de multiplicação (×) é usado para multiplicar dois números. Exemplo: 4 × 2 = 8.</p>
+        </div>
+    </div>
+
+    <!-- Seção do Sinal de Divisão -->
+    <div class="sign-section" id="divisao">
+        <h2>Divisão (÷)</h2>
+        <div class="sign">
+            <h3>Divisão</h3>
+            <p>O sinal de divisão (÷) é usado para dividir um número por outro. Exemplo: 6 ÷ 2 = 3.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Array para armazenar os sinais
+    const sinais = [
+        { letra: "+", sinal: "Adição", descricao: "O sinal de adição (+) é usado para somar dois ou mais números. Exemplo: 3 + 2 = 5." },
+        { letra: "-", sinal: "Subtração", descricao: "O sinal de subtração (-) é usado para subtrair um número de outro. Exemplo: 5 - 3 = 2." },
+        { letra: "×", sinal: "Multiplicação", descricao: "O sinal de multiplicação (×) é usado para multiplicar dois números. Exemplo: 4 × 2 = 8." },
+        { letra: "÷", sinal: "Divisão", descricao: "O sinal de divisão (÷) é usado para dividir um número por outro. Exemplo: 6 ÷ 2 = 3." }
+    ];
+
+    // Função para mostrar o formulário
+    function mostrarFormulario() {
+        document.getElementById("formulario").style.display = "block";
+    }
+
+    // Função para adicionar o sinal
+    function adicionarSinal() {
+        const letra = document.getElementById("letra").value;
+        const sinal = document.getElementById("sinal").value;
+        const descricao = document.getElementById("descricao").value;
+
+        // Verifica se os campos estão preenchidos
+        if (letra && sinal && descricao) {
+            sinais.push({ letra, sinal, descricao });
+            atualizarSinais();
+            document.getElementById("formulario").style.display = "none";
+            document.getElementById("letra").value = '';
+            document.getElementById("sinal").value = '';
+            document.getElementById("descricao").value = '';
+        } else {
+            alert("Por favor, preencha todos os campos.");
+        }
+    }
+
+    // Função para atualizar a lista de sinais na página
+    function atualizarSinais() {
+        const container = document.getElementById("sinais");
+        container.innerHTML = '';
+
+        sinais.forEach(sinal => {
+            const section = document.createElement("div");
+            section.classList.add("sign-section");
+
+            section.innerHTML = `
+                <h2>${sinal.sinal} (${sinal.letra})</h2>
+                <div class="sign">
+                    <h3>${sinal.sinal}</h3>
+                    <p>${sinal.descricao}</p>
+                </div>
+            `;
+            container.appendChild(section);
+        });
+    }
+
+    // Inicializa a página com os sinais predefinidos
+    atualizarSinais();
+</script>
+
+</body>
+</html>
